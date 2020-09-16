@@ -29,7 +29,7 @@ public class GradeServiceTest {
         when(gradeSystem.gradesFor(anyLong())).thenReturn(Arrays.asList(80.0, 90.0, 100.0));
         double result = gradeService.calculateAverageGrades(1);
         Assertions.assertEquals(90.0, result);
-        verify(gradeSystem, times(1)).gradesFor(anyLong());
+        verify(gradeSystem, times(1)).gradesFor(1);
 
     }
 }
